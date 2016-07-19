@@ -1,0 +1,37 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/lib/jquery.js", "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/gmail.css" ],
+      "js": [ "js/lib/jquery.js", "js/vendor/underscore.js", "js/vendor/backbone.js", "js/vendor/marionette.js", "js/module/gmail/gmail_controller.js" ],
+      "matches": [ "http://mail.google.com/mail/*", "https://mail.google.com/mail/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Turn your about.me page into a simple and elegant email signature.",
+   "icons": {
+      "128": "images/meBadge-chromeStore.png",
+      "20": "images/meBadge-20px.png",
+      "32": "images/meBadge-32px.png",
+      "48": "images/meBadge-48px.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1ogoynzbQK4SKNQEzvnVhg6D6DmII6SIXJpN/QnuvM5pOkl5VUHq99AgMtE+cBmmul95i/8En+B37XLTfHP7e8G8qauEniWykBTlpN2BVhBWcfCITJ2CdjiHdwg5onawlnw+sEocFkX+C1iwsiHFybtZ/Yd/7t1mzHiNZYTJM/NCYinp/cq2TweGw5Sd2s23mzlkOWHbCdNWdUtt5clUkbAR0pedqvuSXAapHxrba0PRidTl/FOgm5/LARyEYPMEi3hFX2zF9v7bAbjuBREA+zNFvGvdFuW4USIZW3Zg75QT8SXNr0sGfTVwCLHs0LGjEvaJOcXZjYi/QNZ4HunOUwIDAQAB",
+   "manifest_version": 2,
+   "name": "Email Signature by about.me",
+   "page_action": {
+      "default_icon": {
+         "128": "images/meBadge-chromeStore.png",
+         "20": "images/meBadge-20px.png",
+         "32": "images/meBadge-32px.png",
+         "48": "images/meBadge-48px.png"
+      },
+      "default_title": "Add your about.me page to your gmail signature."
+   },
+   "permissions": [ "tabs", "storage", "alarms", "declarativeContent", "https://about.me/*" ],
+   "short_name": "about.me email sig",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0",
+   "web_accessible_resources": [ "images/*", "js/*" ]
+}

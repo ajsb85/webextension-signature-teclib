@@ -1,0 +1,14 @@
+<div class="icon"></div>
+<div class="menu-container invisible">
+    <div class="aboutme-emailsig-arrow arrow-bottom"></div>
+    <div class="instructions">Add Signature</div>
+    <ul class="menu-content">
+        <% if (thumb_url) { %>
+            <li class="item thumb <%= (show_photo)?'check':''  %>"><span>With your photo</span></li>
+            <li class="item text <%= (show_photo)?'':'check' %>"><span>No photo</span></li>
+        <% } else { %>
+            <li class="item text check"><span>No photo</span></li>
+        <% } %>
+        <li class="item no-show"><span>None</span></li>
+	</ul>
+</div>

@@ -1,0 +1,33 @@
+    <div class="aboutme-emailsig-arrow arrow-top"></div>
+    <div class="menu-content">
+        <section class="top_section">
+            <% if (! user_name) { %>
+                <div class="instructions">Type in your username</div>
+            <% } else { %>
+                <div class="instructions">Your username</div>
+            <% } %>
+            <fieldset class="prefix" data-hint="about.me/">
+                <input id="user_name" type="text" class="input underline" value="<%= user_name %>" placeholder="">
+                <div id="username_error" class="error invisible">Username can't be empty.</div>
+            </fieldset>
+            <fieldset class="actions">
+                <div class="button dark seafoam">
+                    <span class="default-text">Save</span>
+                    <span class="loading-text">Saving…</span>
+                </div>
+            </fieldset>
+            <% if (! user_name) { %>
+                <a class="forgotusername-link" target="_blank" href="https://<%= (site_domain)?site_domain:'about.me' %>/login">Forgot username?</a>
+            <% } %>
+        </section>
+
+        <section class="promote-links">
+            <% if (! user_name) { %>
+                <p class="instructions">New to about.me?</p>
+                <a class="link" target="_blank" href="https://<%= (site_domain)?site_domain:'about.me' %>/signup">GET YOUR PERSONAL PAGE</a>
+            <% } else { %>
+                <a class="link" href="https://<%= site_domain  %>/<%= user_name  %>" target="_blank">UPDATE YOUR PAGE</a>
+                <a class="link" href="http://support.about.me" target="_blank">GET SUPPORT</a>
+            <% } %>
+        </section>
+    </div>
